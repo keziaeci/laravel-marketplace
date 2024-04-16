@@ -7,7 +7,7 @@ use App\Services\UserService;
 
 class RegisterForm extends Component
 {
-    public $email, $password;
+    public $first_name, $last_name, $username, $address , $phone_number ,$email, $password;
     // private $userService;
     private UserService $userService;
     // public function mount() {
@@ -40,7 +40,7 @@ class RegisterForm extends Component
             'last_name' => 'required',
             'username' => 'required|unique:users',
             'address' => 'required',
-            'phone_number' => 'required',
+            'phone_number' => 'required|unique:users',
             'email' => 'required|unique:users',
             'password' => 'required',
         ];
