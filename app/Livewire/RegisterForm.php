@@ -27,6 +27,7 @@ class RegisterForm extends Component
 
     function store() {
         $this->userService->create($this->validate());
+        // FIXME (low): register notification
         $this->notification()->send([
             'icon' => 'success',
             'title' => 'Success Notification!',
