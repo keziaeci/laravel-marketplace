@@ -63,7 +63,7 @@
 
             <p class="text-center text-sm text-gray-500">
                 No account?
-                <a class="underline" href="#">Sign up</a>
+                <a class="underline" href="{{ route('register') }}">Sign up</a>
             </p>
         </form>
     </div>
