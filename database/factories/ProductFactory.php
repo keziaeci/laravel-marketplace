@@ -19,7 +19,7 @@ class ProductFactory extends Factory
         return [
             'name' => fake()->name(),
             'description' => fake()->paragraph(),
-            'colors' => fake()->words(),
+            'options' => json_encode(['blue' => 1, 'red' => 2]),
             'price' => fake()->randomNumber(5,true),
             'stock' => fake()->randomDigit(),
             'category_id' => mt_rand(1,3)

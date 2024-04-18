@@ -16,7 +16,7 @@ class LoginForm extends Component
         $remember = $this->remember == null ? false : true;
         if (Auth::attempt(['username'=> $this->username,'password'=> $this->password],$remember)) {
             request()->session()->regenerate();
-            return redirect()->intended('dashboard');
+            return redirect()->intended('/');
         }
 
         $this->addError('error', 'The provided credentials do not match our records.');

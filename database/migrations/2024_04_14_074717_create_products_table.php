@@ -16,7 +16,7 @@ return new class extends Migration
             $table->text('name');
             $table->text('description');
             // $table->addColumn('text','colors',['array'=> true]);
-            $table->string('colors')->nullable();
+            $table->json('options')->nullable();
             $table->text('price');
             $table->integer('stock')->nullable();
             $table->foreignId('category_id')->constrained()->cascadeOnDelete();

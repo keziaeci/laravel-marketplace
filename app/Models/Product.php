@@ -12,6 +12,6 @@ class Product extends Model
     protected $guarded = ['id'];
 
     protected $casts = [
-        'colors' => 'array'
+        'options' => 'array'
     ];
 }
